@@ -7,9 +7,8 @@ yarn set version berry
 yarn install
 
 # launch the app
-yarn workspace @app/online-store dev
+yarn workspace @test/app dev
 
 # see the error
-yarn workspace @app/online-store build
+yarn workspace @test/app build
 ```
-

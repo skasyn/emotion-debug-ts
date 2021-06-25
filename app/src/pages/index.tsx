@@ -2,7 +2,7 @@ import { QueryClient } from "react-query";
 import { dehydrate } from "react-query/hydration";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetServerSidePropsContext } from "next";
-import { Popover, UiThemeProvider, defaultTheme } from "@app/ui";
+import { Popover, UiThemeProvider, defaultTheme } from "@test/ui";
 import React from "react";
 
 export const getServerSideProps = async ({ locale }: GetServerSidePropsContext) => {
