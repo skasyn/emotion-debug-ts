@@ -1,0 +1,52 @@
+{
+  "name": "test",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .  --ext js,jsx,ts,tsx",
+    "dev": "yarn workspaces foreach -ip run dev"
+  },
+  "workspaces": {
+    "packages": [
+      "online-store",
+      "ui"
+    ]
+  },
+  "prettier": {
+    "singleQuote": false,
+    "printWidth": 100
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged && npx pretty-quick --staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "resolutions": {
+    "webpack": "4.44.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^4.0.0",
+    "babel-eslint": "^10.0.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-next": "^11.0.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "prettier": "2.2.1",
+    "pretty-quick": "^3.1.0"
+  }
+}

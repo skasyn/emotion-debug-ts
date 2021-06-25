@@ -1,0 +1,66 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "name": "@test/ui",
+  "private": true,
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "dev": "tsdx watch --verbose",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": ">=17"
+  },
+  "author": "Antoine FP",
+  "module": "dist/ui.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/ui.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/ui.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@mdx-js/react": "^1.6.22",
+    "@size-limit/preset-small-lib": "^4.11.0",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-docs": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
+    "@types/debounce": "^1.2.0",
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
+    "babel-loader": "8.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "size-limit": "^4.11.0",
+    "storybook-addon-emotion-theme": "^2.1.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.2.0",
+    "typescript": "~4.2.0"
+  },
+  "dependencies": {
+    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@reach/popover": "^0.15.0",
+    "@reach/tabs": "^0.15.0",
+    "@reach/tooltip": "^0.15.0"
+  }
+}

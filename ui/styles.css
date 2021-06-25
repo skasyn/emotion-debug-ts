@@ -1,0 +1,266 @@
+.tooltip-container {
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid silver;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem;
+  transition: opacity 0.3s;
+  z-index: 9999;
+}
+
+.tooltip-arrow {
+  height: 1rem;
+  position: absolute;
+  width: 1rem;
+}
+
+.tooltip-arrow::before {
+  border-style: solid;
+  content: "";
+  display: block;
+  height: 0;
+  margin: auto;
+  width: 0;
+}
+
+.tooltip-arrow::after {
+  border-style: solid;
+  content: "";
+  display: block;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
+
+.tooltip-arrow[data-placement*="bottom"] {
+  height: 1rem;
+  left: 0;
+  margin-top: -0.4rem;
+  top: 0;
+  width: 1rem;
+}
+
+.tooltip-arrow[data-placement*="bottom"]::before {
+  border-color: transparent transparent silver transparent;
+  border-width: 0 0.5rem 0.4rem 0.5rem;
+  position: absolute;
+  top: -1px;
+}
+
+.tooltip-arrow[data-placement*="bottom"]::after {
+  border-color: transparent transparent white transparent;
+  border-width: 0 0.5rem 0.4rem 0.5rem;
+}
+
+.tooltip-arrow[data-placement*="top"] {
+  bottom: 0;
+  height: 1rem;
+  left: 0;
+  margin-bottom: -1rem;
+  width: 1rem;
+}
+
+.tooltip-arrow[data-placement*="top"]::before {
+  border-color: silver transparent transparent transparent;
+  border-width: 0.4rem 0.5rem 0 0.5rem;
+  position: absolute;
+  top: 1px;
+}
+
+.tooltip-arrow[data-placement*="top"]::after {
+  border-color: white transparent transparent transparent;
+  border-width: 0.4rem 0.5rem 0 0.5rem;
+}
+
+.tooltip-arrow[data-placement*="right"] {
+  height: 1rem;
+  left: 0;
+  margin-left: -0.7rem;
+  width: 1rem;
+}
+
+.tooltip-arrow[data-placement*="right"]::before {
+  border-color: transparent silver transparent transparent;
+  border-width: 0.5rem 0.4rem 0.5rem 0;
+}
+
+.tooltip-arrow[data-placement*="right"]::after {
+  border-color: transparent white transparent transparent;
+  border-width: 0.5rem 0.4rem 0.5rem 0;
+  left: 6px;
+  top: 0;
+}
+
+.tooltip-arrow[data-placement*="left"] {
+  height: 1rem;
+  margin-right: -0.7rem;
+  right: 0;
+  width: 1rem;
+}
+
+.tooltip-arrow[data-placement*="left"]::before {
+  border-color: transparent transparent transparent silver;
+  border-width: 0.5rem 0 0.5rem 0.4em;
+}
+
+.tooltip-arrow[data-placement*="left"]::after {
+  border-color: transparent transparent transparent white;
+  border-width: 0.5rem 0 0.5rem 0.4em;
+  left: 3px;
+  top: 0;
+}
+:root {
+  --reach-tabs: 1;
+}
+
+[data-reach-tabs][data-orientation="vertical"] {
+  display: flex;
+}
+
+[data-reach-tab-list] {
+  display: flex;
+  background: hsla(0, 0%, 0%, 0.05);
+}
+
+[data-reach-tab-list][aria-orientation="vertical"] {
+  flex-direction: column;
+}
+
+[data-reach-tab] {
+  display: inline-block;
+  border: none;
+  padding: 0.25em 0.5em;
+  margin: 0;
+  border-bottom: 1px solid transparent;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+[data-reach-tab]:active {
+  background: hsla(0, 0%, 0%, 0.05);
+}
+
+[data-reach-tab]:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+[data-reach-tab][data-selected] {
+  border-bottom-color: currentColor;
+}
+:root {
+  --reach-tooltip: 1;
+}
+
+[data-reach-tooltip] {
+  z-index: 1;
+  pointer-events: none;
+  position: absolute;
+  padding: 0.25em 0.5em;
+  box-shadow: 2px 2px 10px hsla(0, 0%, 0%, 0.1);
+  white-space: nowrap;
+  font-size: 85%;
+  background: #f0f0f0;
+  color: #444;
+  border: solid 1px #ccc;
+}
+/* This code is subject to LICENSE in root of this repository */
+
+/* Used to detect in JavaScript if apps have loaded styles or not. */
+:root {
+  --reach-dialog: 1;
+}
+
+[data-reach-dialog-overlay] {
+  background: hsla(0, 0%, 0%, 0.33);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+}
+
+[data-reach-dialog-content] {
+  width: 50vw;
+  margin: 10vh auto;
+  background: white;
+  padding: 2rem;
+  outline: none;
+}
+/* Used to detect in JavaScript if apps have loaded styles or not. */
+:root {
+  --reach-menu-button: 1;
+}
+
+[data-reach-menu],
+[data-reach-menu-popover] {
+  display: block;
+  position: absolute;
+}
+
+[data-reach-menu][hidden],
+[data-reach-menu-popover][hidden] {
+  display: none;
+}
+
+[data-reach-menu-list],
+[data-reach-menu-items] {
+  display: block;
+  white-space: nowrap;
+  border: solid 1px hsla(0, 0%, 0%, 0.25);
+  background: hsla(0, 100%, 100%, 0.99);
+  outline: none;
+  padding: 1rem 0;
+  font-size: 85%;
+}
+
+[data-reach-menu-item] {
+  display: block;
+  user-select: none;
+}
+
+/*
+ The dom structure of a MenuLink is reach-menu-item > a,
+ so to target all items we can use `data-reach-menu-item`
+*/
+[data-reach-menu-item] {
+  /*
+    These are styled in one rule instead of something like a[data-reach-menu-item]
+    and li[data-reach-menu-item] so that apps don't have to fight specificity and
+    can style both li and a menu items with one rule,
+    ie: `[data-selected] { background: red; }`.
+    Otherwise they'd have to define two styles, one for a and one for li.
+  */
+
+  /* reach-menu-item */
+  cursor: pointer;
+
+  /* a */
+  display: block;
+  color: inherit;
+  font: inherit;
+  text-decoration: initial;
+
+  /* both */
+  padding: 5px 20px;
+}
+
+/* pseudo pseudo selector */
+[data-reach-menu-item][data-selected] {
+  background: hsl(211, 81%, 36%);
+  color: white;
+  outline: none;
+}
+
+[data-reach-menu-item][aria-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

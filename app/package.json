@@ -1,0 +1,24 @@
+{
+  "name": "@test/app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "watch": "yarn workspaces foreach -vRip run dev",
+    "build": "yarn workspaces foreach -vRt run build && next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@app/ui": "workspace:ui",
+    "next": "^11.0.0",
+    "next-i18next": "^8.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-query": "^3.16.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.4"
+  }
+}
