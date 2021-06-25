@@ -1,6 +1,8 @@
 # Using the example
 
 ```sh
+# install yarn 2
+yarn set version berry
 # install dep
 yarn install
 
